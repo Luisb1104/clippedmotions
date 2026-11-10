@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connected — Clipped Motions Hub</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header>
+    <a class="mark" href="../../index.html">Clipped Motions</a>
+    <h1>Meta</h1>
+  </header>
+  <main class="connected">
+    <p>Connected. You can return to Clipped Motions Hub.</p>
+  </main>
+  <footer>
+    <nav>
+      <a href="../../index.html">Home</a>
+    </nav>
+  </footer>
+  <script>
+    // Forward the full OAuth query string to the local Hub callback.
+    // Do not display the code (or any other query parameter) on this page.
+    // Change HUB_CALLBACK if the Hub listens on a different host or path.
+    var HUB_CALLBACK = "http://localhost:8505/oauth/meta/callback";
+    if (window.location.search) {
+      window.location.replace(HUB_CALLBACK + window.location.search);
+    }
+  </script>
+</body>
+</html>

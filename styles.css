@@ -1,0 +1,140 @@
+:root {
+  color-scheme: dark;
+  --bg: #0c0c0d;
+  --fg: #ececec;
+  --muted: #a3a3a8;
+  --line: #2a2a2e;
+  --accent: #e8e8e8;
+  --max: 40rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+header,
+main,
+footer {
+  width: min(var(--max), calc(100% - 2.5rem));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  padding: 2.25rem 0 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+header .mark {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+header h1 {
+  margin: 0.35rem 0 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+main {
+  padding: 2rem 0 3rem;
+}
+
+footer {
+  padding: 1.25rem 0 2.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+
+h2 {
+  margin: 2rem 0 0.6rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h2:first-child {
+  margin-top: 0;
+}
+
+p,
+li {
+  color: var(--fg);
+}
+
+p.lead {
+  font-size: 1.08rem;
+}
+
+p.muted,
+.disclaimer {
+  color: var(--muted);
+}
+
+.disclaimer {
+  margin: 0 0 1.75rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 0.92rem;
+}
+
+ul {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.2rem;
+}
+
+li + li {
+  margin-top: 0.35rem;
+}
+
+.meta {
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.connected {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.connected p {
+  margin: 0;
+  font-size: 1.15rem;
+}
